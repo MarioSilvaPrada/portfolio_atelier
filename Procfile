@@ -1,0 +1,1 @@
+web: gunicorn atelier_project.wsgi --log-file -
