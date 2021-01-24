@@ -1,0 +1,27 @@
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+a {
+  color: rgb(85, 60, 22);
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 500;
+  color: salmon;
+}
+
+.cards_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project_card {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
