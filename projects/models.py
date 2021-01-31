@@ -1,11 +1,12 @@
 from django.db import models
 from django.urls import reverse
+from django.conf import settings
 
 
 class Project(models.Model):
     # many-to-one relationship
     author = models.ForeignKey(
-        'auth.User',
+        settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
     )
     title = models.CharField(max_length=200)

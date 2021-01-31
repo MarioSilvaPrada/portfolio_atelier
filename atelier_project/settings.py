@@ -38,10 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'projects.apps.ProjectsConfig',
-    'accounts.apps.AccountsConfig',
+
+    # 3rd Party
+    'crispy_forms',
     'whitenoise.runserver_nostatic',
-    'django.contrib.staticfiles',
+
+    # Local
+    'projects.apps.ProjectsConfig',
+    'pages.apps.PagesConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +132,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
@@ -134,3 +141,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+AUTH_USER_MODEL = 'users.CustomUser'
